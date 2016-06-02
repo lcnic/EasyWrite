@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/alarm_b">
+
+    <RelativeLayout
+        android:background="@drawable/alarm_t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/alarm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闹钟"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:height="40dp"/>
+
+        <ImageButton
+            android:background="@drawable/alarm"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/alarm_title"
+            android:height="40dp"/>
+    </RelativeLayout>
+
+                <com.example.cro_germany.easywrite.AlarmView
+                    android:id="@+id/tabAlarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/lvAlarmList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" >
+                    </ListView>
+
+                    <Button
+                        android:id="@+id/btnAddAlarm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="添加闹钟" />
+                </com.example.cro_germany.easywrite.AlarmView>
+
+</LinearLayout>
